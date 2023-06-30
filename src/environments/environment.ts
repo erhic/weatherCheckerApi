@@ -4,13 +4,13 @@
 
 export const environment = {
   production: false,
-  weatherApiUrlName :"https://open-weather13.p.rapidapi.com",
+//   weatherApiUrlName :"https://open-weather13.p.rapidapi.com",
  
- XRapidAPIHostHeaderName:"X-RapidAPI-Host",
- XRapidAPIHostHeaderValue:"open-weather13.p.rapidapi.com",
+//  XRapidAPIHostHeaderName:"X-RapidAPI-Host",
+//  XRapidAPIHostHeaderValue:"open-weather13.p.rapidapi.com",
 
-  XRapidAPIKeyHeaderName:"X-RapidAPI-Key",
-  XRapidAPIKeyHeaderValue:"893fc6e6cfmsh5abf3539bd17c34p168ee4jsn7fbd64c24430"
+//   XRapidAPIKeyHeaderName:"X-RapidAPI-Key",
+//   XRapidAPIKeyHeaderValue:"893fc6e6cfmsh5abf3539bd17c34p168ee4jsn7fbd64c24430"
   
 
 };
