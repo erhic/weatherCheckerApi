@@ -20,43 +20,49 @@ px-5 border border-white">
   <div class="row">
 
     <div class="col-md-2 mx-auto">
-      <p>;;;Max Tempareture
-        <span><br>
+      <p><i class="bi bi-thermometer-high px-2 text-danger"></i><span class="text-muted">Max Tempareture:</span>
+        <span class="px-3 bg-light"><br>
           {{weatherData.main.temp_max| number:'1.0-0'}}°c
         </span>
       </p>
       <br>
-      <p>...Min Tempareture<span><br>
+      <p><i class="bi bi-thermometer-low px-2 text-primary"></i>Min <span class="text-muted">Min Tempareture:</span>
+        <span class="px-3 bg-light"><br>
           {{weatherData.main.temp_max| number:'1.0-0'}}°c
-        </span></p>
-    </div>
-
-    <div class="imagecontainer col-md-6 mx-auto" style="position: re;">
-      <img class="card  img-fluid" src=" ../assets/cold.jpg" height="" alt="" * ngIf="  weatherData.main.temp>14">
-
-      <img class="w-100 overlay" src="../assets/images/beautiful-sky.jpg" height="" alt=""
-        *ngIf="  weatherData.main.temp<15">
-
-      <img class="w-100" src="../assets/images/rainy.gif" alt="" *ngIf="">
-      <p class=" bg-light p-2 text-gray overlay align-center text-center my-2 h6" style="position: relative;">
-        <span class="px-3 ">name:
-          {{weatherData.name}}
-        </span>
-        <span class="px-3">main temp:
-          {{ weatherData.main.temp| number:'1.0-0'}}°c
         </span>
       </p>
     </div>
+
+    <div class="imagecontainer col-md-6 mx-auto" style="position: re;">
+      <p class=" bg-light p-3 text-gray overlay align-center text-center my-2 h6" style="position: relative;">
+        <span class="px-3 "> <i class="bi bi-geo-alt-fill px-2"></i><span class="text-muted">Location:</span>
+          {{weatherData.name}}
+        </span>
+        <span class="px-3 bg-light "><i class="bi bi-thermometer px-2"></i> <span class="text-muted">Tempareture:</span>
+          {{ weatherData.main.temp| number:'1.0-0'}}°c
+        </span>
+      </p>
+      <img class="card  img-fluid" src=" ../assets/images/cold.jpg" height="" alt="" *
+        ngIf="weatherData.main.temp<14 $$ weatherData.main.temp>5">
+
+      <img class="w-100 overlay" src="../assets/images/beautiful-sky.jpg" height="" alt=""
+        *ngIf="weatherData.main.temp>15">
+
+      <img class=" w-100" src="../assets/images/rainy.gif" alt="" *ngIf="weatherData.main.temp<5">
+
+    </div>
     <div class="col-md-2 mx-auto">
-      <p>;;;Wind
+      <p class="bg-light p-3"><i class="bi bi-wind px-2"></i><span class="text-muted">Wind:</span>
         <span><br>
           {{weatherData.wind.speed}}Km/h
         </span>
 
       </p>
       <br>
-      <p>...Humidity<span><br>
+      <p class="bg-light p-3"><i class="bi bi-moisture px-2"></i><span class="text-muted">Humidity:</span>
+        <span><br>
           {{weatherData.main.humidity}}%
-        </span></p>
+        </span>
+      </p>
     </div>
   </div>
