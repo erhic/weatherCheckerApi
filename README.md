@@ -7,10 +7,6 @@ This a website application is used to identify the weather location of various c
 On load , a form to key location for search weather status,default location weather status
 On search, retrive weather status of the location
 
-## Language used
-
-Angular(version 13), Bootstrap
-
 ## Website Layout
 
 <img
@@ -19,7 +15,14 @@ Angular(version 13), Bootstrap
   title="Website Layout"
   style="display: inline-block; margin: 0 auto; max-width: 300px">
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.1.
+## Language used
+
+- Angular
+- Bootstrap
+- Consuming Rapid API -
+  [Open Weather API](https://rapidapi.com/worldapi/api/open-weather13/pricing)
+
+- - This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.1.
 
 ## Development server
 
