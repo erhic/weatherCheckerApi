@@ -4,58 +4,59 @@
 
 <div class="card highlight mx-auto my-4 
 px-5 border border-white">
-  <form class="border border-white">
-    <input class="px-3" type="text" placeholder="Search city weather ,here">
-  </form>
+  <!-- <form class="border border-white" #form="ngForm" (submit)="onSubmit()">
+    <input class="px-3" type="text" placeholder="Search city weather ,here" name="city" [(ngModel)]="city"> -->
+  <!-- </form> -->
 </div>
 
-<div class="container">
-  <!-- *ngIf="weatherData" -->
+<div class="container" *ngIf="weatherData">
+
   <!-- Header -->
 
 
 
 
-  <!-- weatherData.main.temp -->
+
   <div class="row">
 
     <div class="col-md-2 mx-auto">
       <p>;;;Max Tempareture
         <span><br>
-          <!-- {{weatherData.main.temp_max| number:'1.0-0'}}°c -->
+          {{weatherData.main.temp_max| number:'1.0-0'}}°c
         </span>
       </p>
       <br>
       <p>...Min Tempareture<span><br>
-          <!-- {{weatherData.main.temp_max| number:'1.0-0'}}°c -->
+          {{weatherData.main.temp_max| number:'1.0-0'}}°c
         </span></p>
     </div>
 
-    <div class="imagecontainer col-md-6 mx-auto">
-      <img class="card  img-fluid" src=" ../assets/cold.jpg" height="" alt="" * ngIf="14>15">
+    <div class="imagecontainer col-md-6 mx-auto" style="position: re;">
+      <img class="card  img-fluid" src=" ../assets/cold.jpg" height="" alt="" * ngIf="  weatherData.main.temp>14">
 
-      <img class="w-100" src="../assets/images/beautiful-sky.jpg" height="" alt="" *ngIf="14<15">
+      <img class="w-100 overlay" src="../assets/images/beautiful-sky.jpg" height="" alt=""
+        *ngIf="  weatherData.main.temp<15">
 
       <img class="w-100" src="../assets/images/rainy.gif" alt="" *ngIf="">
-      <p class=" text-center my-2 h6">
-        <span class="px-3 ">name
-          <!-- {{weatherData.name}} -->
+      <p class=" bg-light p-2 text-gray overlay align-center text-center my-2 h6" style="position: relative;">
+        <span class="px-3 ">name:
+          {{weatherData.name}}
         </span>
-        <span class="px-3">main temp
-          <!-- {{ weatherData.main.temp| number:'1.0-0'}}°c -->
+        <span class="px-3">main temp:
+          {{ weatherData.main.temp| number:'1.0-0'}}°c
         </span>
       </p>
     </div>
     <div class="col-md-2 mx-auto">
       <p>;;;Wind
         <span><br>
-          <!-- {{weatherData.wind.speed}}Km/h -->
+          {{weatherData.wind.speed}}Km/h
         </span>
 
       </p>
       <br>
       <p>...Humidity<span><br>
-          <!-- {{weatherData.main.humidity}}% -->
+          {{weatherData.main.humidity}}%
         </span></p>
     </div>
   </div>
