@@ -16,7 +16,7 @@ city?: string;
  XRapidAPIHostHeaderValue:string="open-weather13.p.rapidapi.com";
 
   XRapidAPIKeyHeaderName:string="X-RapidAPI-Key"
-  XRapidAPIKeyHeaderValue:string="893fc6e6cfmsh5abf3539bd17c34p168ee4jsn7fbd64c24430"
+  XRapidAPIKeyHeaderValue:string="8a7899fe14bmsh47f0ff9261fb18cp1aad5cjsnc4fc28a4cb94"
   
   constructor(private http:HttpClient) { }
 
