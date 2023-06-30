@@ -1,12 +1,12 @@
-<div class="card highlight-card card-small">
-  <p class="h1 text-white">{{ title }} Status Checker</p>
+<div class="card highlight-card card-small bg-primary">
+  <p class="h1 text-white text-center">{{ title }} Status Checker</p>
 </div>
 
-<div class="card highlight mx-auto my-4 
+<div class="card highlight mx-auto d-flex float-center text-center my-4 
 px-5 border border-white">
-  <!-- <form class="border border-white" #form="ngForm" (submit)="onSubmit()">
-    <input class="px-3" type="text" placeholder="Search city weather ,here" name="city" [(ngModel)]="city"> -->
-  <!-- </form> -->
+  <form class="border border-white" #form="ngForm" (submit)="onSubmit()">
+    <input class="px-3" type="text" placeholder="Search city weather ,here" name="city" [(ngModel)]="city">
+  </form>
 </div>
 
 <div class="container" *ngIf="weatherData">
@@ -42,13 +42,14 @@ px-5 border border-white">
           {{ weatherData.main.temp| number:'1.0-0'}}°c
         </span>
       </p>
-      <img class="card  img-fluid" src=" ../assets/images/cold.jpg" height="" alt="" *
-        ngIf="weatherData.main.temp<14 $$ weatherData.main.temp>5">
+      <img class="card  img-fluid" src=" assets/images/cold.jpg" height=""
+        alt="The weather is cooled image illustration" * ngIf="weatherData.main.temp<14 $$ weatherData.main.temp>5">
 
-      <img class="w-100 overlay" src="../assets/images/beautiful-sky.jpg" height="" alt=""
-        *ngIf="weatherData.main.temp>15">
+      <img class="w-100 overlay" src="assets/images/beautiful-sky.jpg" height=""
+        alt="The weather is sunny image illustration" *ngIf="weatherData.main.temp>15">
 
-      <img class=" w-100" src="../assets/images/rainy.gif" alt="" *ngIf="weatherData.main.temp<5">
+      <img class=" w-100" src="assets/images/rainy.gif" alt="The weather is rainy image illustration"
+        *ngIf="weatherData.main.temp<5">
 
     </div>
     <div class="col-md-2 mx-auto">
